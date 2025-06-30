@@ -1,0 +1,126 @@
+
+        :root {
+            --primary: #3B82F6;
+            --secondary: #1E40AF;
+            --accent: #60A5FA;
+            --dark: #1F2937;
+        }
+        /* Default (tertutup) */
+        .mobile-menu-transition {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+        }
+
+        .mobile-menu-transition.open {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
+
+        /* Saat dibuka */
+        .mobile-menu-transition.open {
+        max-height: 1000px; /* sesuaikan jika kontennya tinggi */
+        opacity: 1;
+        transform: translateY(0);
+        }
+
+
+
+
+
+        /* Swiper Custom Styles */
+        .swiper {
+        overflow: hidden;
+        }
+
+        .swiper .swiper-wrapper {
+        transition-timing-function: linear;
+        will-change: transform;
+        }
+
+        .swiper .swiper-slide {
+        width: auto;
+        padding: 0 1rem;
+        }
+        
+        .hero-pattern {
+            background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+        
+        .dark .hero-pattern {
+            background: radial-gradient(circle, rgba(59,130,246,0.05) 0%, rgba(0,0,0,0) 70%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .dark .service-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.05), 0 10px 10px -5px rgba(255, 255, 255, 0.02);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        .dark .text-gray-800 {
+            color: #f3f4f6;
+        }
+        
+        .dark .bg-gray-200 {
+            background-color: #1f2937;
+        }
+        
+        .dark .bg-white {
+            background-color: #111827;
+        }
+        
+        .dark .bg-gray-50 {
+            background-color: #111827;
+        }
+        
+        .dark .text-gray-600 {
+            color: #d1d5db;
+        }
+        
+        .dark .border-gray-300 {
+            border-color: #374151;
+        }
+        
+        .dark .bg-gradient-to-r.from-gray-900.to-gray-800 {
+            background: linear-gradient(to right, #0f172a, #1e293b);
+        }
+        
+        .dark .bg-gradient-to-r.from-gray-200.to-gray-200 {
+            background: linear-gradient(to right, #1f2937, #1f2937);
+        }
+        
+        .dark .bg-dark {
+            background-color: #030712;
+        }
+        
+        .dark .bg-primary {
+            background-color: #1d4ed8;
+        }
+        
+        .dark .text-primary {
+            color: #93c5fd;
+        }

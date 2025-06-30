@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andri Irvansyah | Mobile App Developer</title>
+    
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Free CDN (termasuk fa-brands) -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-sV9Xn9+8c+4S+WqvnqkLLJw94RRZbsceox4Tr3zB3qbSfoTkRrI9ozANuDEH4uMFd2xHTKBgPtgy0VucwNPL9g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="font-poppins bg-gray-900">
+    <!-- Header/Navbar -->
+    <header id="main-header" class="sticky top-2 z-50 bg-gray-200/80 dark:bg-gray-800/80 shadow-md mx-5 mt-2 rounded-xl transition-opacity duration-300 ease-in-out">
+
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white dark:text-white font-bold text-xl">AI</div>
+                        <span class="ml-3 text-xl font-bold text-gray-800 dark:text-white">Andri<span class="text-blue-400 dark:text-blue-400"> Irvansyah</span></span>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Dark mode toggle button -->
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+                    <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                </button>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Beranda</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Tentang</a>
+                    <a href="#services" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Layanan</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Portofolio</a>
+                    <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Keahlian</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Kontak</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
+                    <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-transition mobile-menu md:hidden bg-white dark:bg-gray-900 shadow-lg border-t dark:border-gray-700 z-50 fixed inset-x-0 top-16 transition-all duration-300 ease-in-out">
+        <div class="px-4 py-6 space-y-3">
+            <a href="#home" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
+            <i class="fas fa-home w-5"></i> Beranda
+            </a>
+            <a href="#about" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
+            <i class="fas fa-user w-5"></i> Tentang
+            </a>
+            <a href="#services" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
+            <i class="fas fa-cogs w-5"></i> Layanan
+            </a>
+            <a href="#projects" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
+            <i class="fas fa-briefcase w-5"></i> Portofolio
+            </a>
+            <a href="#skills" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
+            <i class="fas fa-code w-5"></i> Keahlian
+            </a>
+            <a href="#contact" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
+            <i class="fas fa-envelope w-5"></i> Kontak
+            </a>
+        </div>
+        </div>
+
+    </header>
+
+
+    <!-- Tabbar di bawah -->
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-md">
+  <div class="flex justify-around items-center h-16">
+    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+      <i class="fas fa-home text-xl"></i>
+      <span class="text-xs mt-1">Beranda</span>
+    </button>
+    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+      <i class="fas fa-briefcase text-xl"></i>
+      <span class="text-xs mt-1">Proyek</span>
+    </button>
+    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+      <i class="fas fa-code text-xl"></i>
+      <span class="text-xs mt-1">Skill</span>
+    </button>
+    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+      <i class="fas fa-envelope text-xl"></i>
+      <span class="text-xs mt-1">Kontak</span>
+    </button>
+  </div>
+</div>
+
+
+    <!-- Hero Section -->
+     <section id="home" class="py-16 md:py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-amber-400">Andri Irvansyah</span></h1>
+                <h2 class="text-2xl md:text-3xl text-green-400 mb-6">Mobile Apps & Flutter Enthusiast</h2>
+                <p class="text-lg mb-8 text-gray-300">I build beautiful and functional mobile applications with clean, efficient code.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/andri-irvansyah/" target="_blank" class="text-gray-300 hover:text-green-400 transition">
+                        <svg class="w-12 h-12 text-2xl" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Irvansbase" target="_blank" class="text-gray-300 hover:text-green-400 transition">
+                        <svg class="w-12 h-12 text-2xl" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@andriirvansyah" target="_blank" class="text-gray-300 hover:text-green-400 transition">
+                        <svg class="w-12 h-12 text-2xl" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+                <div class="relative floating-element">
+                    <div class="absolute -top-6 -left-6 w-64 h-64 bg-blue-200 rounded-full opacity-50 dark:opacity-20"></div>
+                    <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-blue-100 rounded-full opacity-50 dark:opacity-20"></div>
+                    <div class="relative bg-gradient-to-br from-blue-100 to-blue-300 border-blue-200 rounded-xl w-64 h-80 md:w-72 md:h-96 flex items-center justify-center overflow-hidden shadow-xl profile-shadow">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczPgxQb_PtOyjUEJ6l0XDp3w0bg2z_r74kY6-T5Hqw3W1f_2yO-eJs1EoZGnQ7DvUfowJ7VpZKrXv_8eQ3J6k4Q9he2ELuy_x5bF1ET3OI0YCJdxfzowaujisEe4jJb55qn61p5sJvEob1nidYkVzX7K=w763-h919-s-no-gm?authuser=0" 
+                             alt="Andri Irvansyah" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-300 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">About <span class="text-amber-800 dark:text-blue-400">Me</span></h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/5 mb-8 md:mb-0 md:pr-8 flex justify-center">
+                    <div class="w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczPgxQb_PtOyjUEJ6l0XDp3w0bg2z_r74kY6-T5Hqw3W1f_2yO-eJs1EoZGnQ7DvUfowJ7VpZKrXv_8eQ3J6k4Q9he2ELuy_x5bF1ET3OI0YCJdxfzowaujisEe4jJb55qn61p5sJvEob1nidYkVzX7K=w763-h919-s-no-gm?authuser=0" 
+                             alt="Andri Irvansyah" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-3/5">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Mobile Apps Developer</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+                        I'm a passionate mobile developer with expertise in building beautiful and functional applications. 
+                        My focus is on creating responsive UI, robust functionality, and ensuring seamless user experience across devices.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        I specialize in Flutter, React Native, and native Android/iOS development. 
+                        I'm dedicated to delivering high-quality solutions that meet both business requirements and user expectations.
+                    </p>
+                    
+                    <a href="#" class="mt-8 inline-block px-6 py-3 bg-primary text-white font-medium rounded-lg bg-secondary hover:bg-amber-500 hover:text-gray-900">
+                        <i class="fas fa-download mr-2"></i>Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-200 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">My <span class="text-amber-800 dark:text-blue-400">Services</span></h2>
+                <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    I offer a wide range of mobile development services to help your business grow and succeed.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Mobile App Development</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Custom mobile applications for iOS and Android platforms using native and cross-platform technologies.</p>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">App Migration & Upgrade</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Modernize legacy applications or migrate to new platforms while preserving functionality and data.</p>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600 dark:text-gray-300">User-centered design that enhances usability and creates engaging experiences for your mobile apps.</p>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transition-all duration-300">
+                    <div class="w-14 h-14 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">App Deployment</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Assistance with publishing your app to App Store, Google Play, and enterprise distribution platforms.</p>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transition-all duration-300">
+                    <div class="w-14 h-14 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Maintenance & Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Ongoing maintenance, updates, and technical support to keep your application running smoothly.</p>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transition-all duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Performance Optimization</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Improve app performance, reduce loading times, and optimize resource usage for better user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- 🔹 Pembungkus -->
+    <section id="projects-container" class="py-16 bg-gray-300 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        Mobile App <span class="text-amber-800 dark:text-blue-400">Projects</span>
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Technologies and tools I master in mobile application development.
+      </p>
+    </div>
+
+    <!-- Certificate Grid Container -->
+    <div id="data-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Sertifikat akan dimasukkan melalui JavaScript -->
+    </div>
+
+    <!-- Show More Button -->
+    <div class="text-center mt-12">
+      <button id="showMoreBtn-projects" class="inline-block px-6 py-3 bg-primary text-white font-medium rounded-lg bg-secondary hover:bg-amber-500 hover:text-gray-900">
+        Show More Projects
+      </button>
+    </div>
+  </div>
+    </section>
+
+   <section id="skills" class="py-16 bg-gray-200 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        Technical <span class="text-amber-800 dark:text-blue-400">Skills</span>
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Technologies and tools I master in mobile application development.
+      </p>
+    </div>
+
+    <!-- Swiper wrapper -->
+    <div class="swiper">
+      <div id="skills-grid" class="swiper-wrapper">
+        <!-- Slides will be injected here via JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Sertifikat -->
+    <section id="certificates" class="py-16 bg-gray-300 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        My <span class="text-amber-800 dark:text-blue-400">Certificates</span>
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Technologies and tools I master in mobile application development.
+      </p>
+    </div>
+
+    <!-- Certificate Grid Container -->
+    <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Sertifikat akan dimasukkan melalui JavaScript -->
+    </div>
+
+    <!-- Show More Button -->
+    <div class="text-center mt-12">
+      <button id="showMoreBtn-certificates" class="inline-block px-6 py-3 bg-primary text-white font-medium rounded-lg bg-secondary hover:bg-amber-500 hover:text-gray-900">
+        Show More Certificates
+      </button>
+    </div>
+  </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Hire <span class="text-amber-800 dark:text-blue-400">Me</span></h2>
+            <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Ready to bring your mobile app idea to life? Let's work together on your next project!
+            </p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-gradient-to-br from-primary to-secondary dark:from-blue-900 dark:to-indigo-900 p-12 text-gray-800 dark:text-white mb-6">
+                    <div class="flex flex-col justify-between h-full">
+                        <div>
+                            <h3 class="text-3xl font-bold">Let's Build Something Amazing</h3>
+                            <p class="mt-4 opacity-90 dark:text-blue-100">
+                                I specialize in creating high-quality mobile applications that solve real problems and deliver exceptional user experiences.
+                            </p>
+                            
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-white/20 p-2 rounded-lg">
+                                        <i class="fas fa-rocket text-lg"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold">Fast Delivery</h4>
+                                        <p class="text-gray-800 dark:text-white mb-6">Projects completed on time with agile methodology</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-white/20 p-2 rounded-lg">
+                                        <i class="fas fa-sync-alt text-lg"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold">Continuous Support</h4>
+                                        <p class="text-gray-800 dark:text-white mb-6">Ongoing maintenance and updates after launch</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-white/20 p-2 rounded-lg">
+                                        <i class="fas fa-lock text-lg"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold">Secure & Reliable</h4>
+                                        <p class="text-gray-800 dark:text-white mb-6">Industry-standard security practices implemented</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center">
+                                    <i class="fas fa-star text-yellow-300"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-bold">Rated Developer</p>
+                                    <p class="text-gray-800 dark:text-white">4/5 rating across platforms</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 p-12">
+                    <div class="text-center h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">How would you like to work together?</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Upwork Button -->
+                            <a href="#" class="block group">
+                                <div class="flex items-center justify-center bg-white dark:bg-gray-700 border border-green-500 rounded-lg p-4 transition-all duration-300 hover:bg-green-50 dark:hover:bg-green-900/20 hover:shadow-lg">
+                                    <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
+                                        <svg class="w-8 h-8 text-green-600 dark:text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703 0 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-.349 2.601-1.075 3.732-.641 1.085-1.702 1.86-3.139 2.254v2.543c1.45-.271 2.621-.981 3.573-2.191 1.005-1.259 1.478-2.928 1.479-4.998V6.9h1.41v11.154c0 1.129.108 2.252.29 3.191h6.142c-.06-.749-.161-1.508-.332-2.242h-3.742v-9.5c0-.455.054-.909.161-1.352 1.699 3.333 4.359 5.505 7.62 5.505 2.953 0 5.359-2.406 5.359-5.36 0-2.952-2.406-5.358-5.36-5.358z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4 text-left">
+                                        <h4 class="font-bold text-gray-800 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">Hire on Upwork</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm">Top Rated Plus Developer</p>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <i class="fas fa-arrow-right text-gray-400 group-hover:text-green-600 dark:group-hover:text-green-400"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Fiverr Button -->
+                            <a href="#" class="block group">
+                                <div class="flex items-center justify-center bg-white dark:bg-gray-700 border border-green-400 rounded-lg p-4 transition-all duration-300 hover:bg-green-50 dark:hover:bg-green-900/20 hover:shadow-lg">
+                                    <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
+                                        <svg class="w-8 h-8 text-green-500 dark:text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zM12 1.5C6.201 1.5 1.5 6.201 1.5 12S6.201 22.5 12 22.5 22.5 17.799 22.5 12 17.799 1.5 12 1.5zM9.75 8.25h.75a.75.75 0 01.75.75v6a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75V9a.75.75 0 01.75-.75zm4.5 0h.75a.75.75 0 01.75.75v6a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75V9a.75.75 0 01.75-.75z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-4 text-left">
+                                        <h4 class="font-bold text-gray-800 dark:text-white group-hover:text-green-500 dark:group-hover:text-green-400">Hire on Fiverr</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm">Level 2 Seller</p>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <i class="fas fa-arrow-right text-gray-400 group-hover:text-green-500 dark:group-hover:text-green-400"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Direct Contract Button -->
+                            <a href="#" class="block group">
+                                <div class="flex items-center justify-center bg-white dark:bg-gray-700 border border-blue-500 rounded-lg p-4 transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:shadow-lg">
+                                    <div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
+                                        <i class="fas fa-file-contract text-blue-600 dark:text-blue-400 text-xl"></i>
+                                    </div>
+                                    <div class="ml-4 text-left">
+                                        <h4 class="font-bold text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Direct Contract</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm">Custom agreement & payment</p>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <i class="fas fa-arrow-right text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-10 pt-6 border-t dark:border-gray-700">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">Prefer to start with a conversation?</h4>
+                            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                                <a href="mailto:hello@andriirvansyah.com" class="px-6 py-3 bg-white dark:bg-gray-700 border border-primary text-primary dark:text-blue-400 font-medium rounded-lg hover:bg-amber-500 hover:text-gray-900 hover:text-white dark:hover:bg-blue-900 transition flex items-center justify-center">
+                                    <i class="fas fa-envelope mr-2"></i> Email Me
+                                </a>
+                                <a href="https://calendly.com/andriirvansyah" target="_blank" class="px-6 py-3 bg-primary text-white font-medium rounded-lg bg-secondary hover:bg-amber-500 hover:text-gray-900 transition flex items-center justify-center">
+                                    <i class="fas fa-calendar-alt mr-2"></i> Schedule Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white dark:text-white font-bold text-xl">AI</div>
+                        <span class="ml-3 text-xl font-bold text-white dark:text-white">Andri<span class="text-blue-400 dark:text-blue-400"> Irvansyah</span></span>
+                    </div>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        Specializing in mobile app development for iOS and Android with innovative solutions and high performance.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Irvansbase" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/andri-irvansyah/" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@andriirvansyah" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-red-600 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pink-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2023 Andri Irvansyah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="script.js"></script>
+    <script src="/Pages/projects.js"></script>
+    <script src="/Pages/certificates.js"></script>
+    <script src="tailwind-config.js"></script>
+    <script src="Pages/skills.js"></script>
+</body>
+</html>
