@@ -15,7 +15,7 @@ const projectData = [
   },
   {
     id: 2,
-    title: "ShiftKu: Laporan Akhir Shift [Internsl Testing]",
+    title: "ShiftKu: Laporan Akhir Shift [Internal Testing]",
     description:
       "ShiftKu is a modern and lightweight Flutter-based application designed to help employees and supervisors record and review end-of-shift reports in a clear and structured format. Ideal for retail, hospitality, warehouse, or any operational team that relies on daily shift tracking and reporting.",
     technologies: ["Flutter", "REST API", "Dart", "Supabase"],
