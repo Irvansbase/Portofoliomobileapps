@@ -312,43 +312,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.getElementById('showMoreBtn-projects');
-    const container = document.getElementById('data-container');
-    const allItems = container.querySelectorAll('.projects-item');
+    const toggleBtnp = document.getElementById('showMoreBtn-projects');
+    const containerp = document.getElementById('data-container');
+    const allItemsp = containerp.querySelectorAll('.projects-item');
 
     const step = 3;
     let visibleCount = 3;
 
     // Inisialisasi: sembunyikan semua kecuali 3 item pertama
-    allItems.forEach((item, index) => {
+    allItemsp.forEach((item, index) => {
         item.classList.toggle('hidden', index >= visibleCount);
     });
 
-    toggleBtn.addEventListener('click', function () {
-        const totalItems = allItems.length;
+    toggleBtnp.addEventListener('click', function () {
+        const totalItems = allItemsp.length;
 
         if (visibleCount < totalItems) {
             visibleCount = Math.min(visibleCount + step, totalItems);
-            allItems.forEach((item, index) => {
+            allItemsp.forEach((item, index) => {
                 item.classList.toggle('hidden', index >= visibleCount);
             });
 
             // Ubah teks jika semua item sudah tampil
             if (visibleCount === totalItems) {
-                toggleBtn.textContent = 'Show Less Certificates';
+                toggleBtnp.textContent = 'Show Less Projects';
             }
         } else {
             // Reset ke 3 item
             visibleCount = 3;
-            allItems.forEach((item, index) => {
+            allItemsp.forEach((item, index) => {
                 item.classList.toggle('hidden', index >= visibleCount);
             });
-            toggleBtn.textContent = 'Show More Certificates';
+            toggleBtnp.textContent = 'Show More Projects';
         }
 
         // Scroll tombol agar tetap terlihat
         setTimeout(() => {
-            toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            toggleBtnp.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 300);
     });
 });
