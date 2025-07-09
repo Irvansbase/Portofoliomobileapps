@@ -1,7 +1,7 @@
 const projectData = [
   {
     id: 1,
-    title: "CekPaket - Cek Resi Pengiriman",
+    title: "CekPaket - Cek Resi Pengiriman [Internal Testing]",
     description:
       "CekPaket - Cek Resi Pengiriman is a Flutter-based parcel tracking application that allows users to check their shipment status in real-time using tracking numbers from multiple Indonesian courier services. Powered by the Binderbyte API, this app provides an easy and clean interface for monitoring package delivery status across popular logistics providers..",
     technologies: ["Flutter", "REST API", "AdMob", "Dart", ],
@@ -9,85 +9,85 @@ const projectData = [
     image: "https://lh3.googleusercontent.com/pw/AP1GczOQPFgkAfpcLVMOp3pJ3-iZ33-lWA1SZzelcsP_Ej_fRGCXK04RcRXQWkj453UtoXFRFjDlR6fDLvEANNZUDeCuULPSyZBAQGZ5t6Cg1PrTrFVr9QxlOYvAYQCZCiEWWjpXcGMLq5GLW-zrj7s5mBM5=w1024-h500-s-no-gm?authuser=0",
     liveLink: "https://play.google.com/store/apps/details?id=com.andriirvansyah.cek_resi",
     githubLink: "https://github.com/Irvansbase/cek-resiku-tracking-app?tab=readme-ov-file",
-    rating: "Internal Testing",
+    rating: 0,
     downloads: "Internal Testing",
     isHidden: false
   },
   {
     id: 2,
-    title: "Finance Tracker Pro",
+    title: "ShiftKu: Laporan Akhir Shift [Internsl Testing]",
     description:
-      "Comprehensive personal finance tracking app with budget management, expense categorization, and financial insights.",
-    technologies: ["React Native", "Redux", "Node.js", "MongoDB", "Chart.js"],
-    completed: "March 2025",
+      "ShiftKu is a modern and lightweight Flutter-based application designed to help employees and supervisors record and review end-of-shift reports in a clear and structured format. Ideal for retail, hospitality, warehouse, or any operational team that relies on daily shift tracking and reporting.",
+    technologies: ["Flutter", "REST API", "Dart", "Supabase"],
+    completed: "Juli 2025",
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    liveLink: "https://finance-app.com",
-    githubLink: "https://github.com/yourusername/finance-app",
-    rating: 4.6,
-    downloads: "5K+",
+      "https://lh3.googleusercontent.com/pw/AP1GczOKp_d2mnJfH46H-oNFjnuel3Nl1lrxB8xmqlvZBXQf_a4G9KWxT7SzhRPHVmXOnxN-yGw_Lbn42c27ilsLKAg7EdnhoP9A51GyxPxYeh2h1jgooQO8-yoD633PIcQTnUX6Xtdz02QcOa3HL4mK-Fxj=w1024-h500-s-no-gm?authuser=0",
+    liveLink: "https://play.google.com/store/apps/details?id=com.andriirv.laporan_akhir_shift",
+    githubLink: "https://github.com/Irvansbase/shiftku-laporan-akhir-shift",
+    rating: 0,
+    downloads: "9",
     isHidden: false
   },
   {
     id: 3,
-    title: "Health & Fitness Companion",
+    title: "Flutter Ecommerce UI Kit | Built with Provider (90% Figma Match) [Slicing Figma]",
     description:
-      "All-in-one health tracking app with workout plans, nutrition logging, and progress analytics.",
+      "This is a complete Flutter app template built from a Figma design, ideal for anyone building a shopping or catalog app. The UI is modular, clean, and uses Provider for state management.",
     technologies: ["Flutter", "Firebase", "Google Fit API", "HealthKit", "BLoC"],
-    completed: "January 2025",
+    completed: "Juli 2025",
     image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    liveLink: "https://health-app.com",
-    githubLink: "https://github.com/yourusername/health-app",
-    rating: 4.9,
-    downloads: "15K+",
+      "https://lh3.googleusercontent.com/pw/AP1GczP9mVHvxmW_ewYTnH3-s5-QTl0KFT2vAj4qygfs2_oRWcEzWjRHU3XFu4dpJLZtAvWBtmlAFWYyhLUdqeWikmtbKyyRiMQrmZF92UgGT3gW34BbxLCDaxp6UPnIQxs_nVKKqSGrMes1ZedrxVRv8pgo=w1600-h800-s-no-gm?authuser=0",
+    liveLink: "https://github.com/Irvansbase/flutter-ecommerce-ui-kit",
+    githubLink: "https://github.com/Irvansbase/flutter-ecommerce-ui-kit",
+    rating: 0,
+    downloads: "0",
     isHidden: false
   },
-  {
-    id: 1,
-    title: "TopUp Game & Pulsa App",
-    description:
-      "A modern Flutter application for buying game top-ups, electricity tokens, and mobile credits. Integrated with Supabase, Midtrans, and Google AdMob for monetization.",
-    technologies: ["Flutter", "Supabase", "REST API", "AdMob", "Dart", "Firebase"],
-    completed: "May 2025",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    liveLink: "https://your-app-link.com",
-    githubLink: "https://github.com/yourusername/topup-app",
-    rating: 4.8,
-    downloads: "10K+",
-    isHidden: true
-  },
-  {
-    id: 2,
-    title: "Finance Tracker Pro",
-    description:
-      "Comprehensive personal finance tracking app with budget management, expense categorization, and financial insights.",
-    technologies: ["React Native", "Redux", "Node.js", "MongoDB", "Chart.js"],
-    completed: "March 2025",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    liveLink: "https://finance-app.com",
-    githubLink: "https://github.com/yourusername/finance-app",
-    rating: 4.6,
-    downloads: "5K+",
-    isHidden: true
-  },
-  {
-    id: 3,
-    title: "Health & Fitness Companion",
-    description:
-      "All-in-one health tracking app with workout plans, nutrition logging, and progress analytics.",
-    technologies: ["Flutter", "Firebase", "Google Fit API", "HealthKit", "BLoC"],
-    completed: "January 2025",
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    liveLink: "https://health-app.com",
-    githubLink: "https://github.com/yourusername/health-app",
-    rating: 4.9,
-    downloads: "15K+",
-    isHidden: true
-  },
+  // {
+  //   id: 1,
+  //   title: "TopUp Game & Pulsa App",
+  //   description:
+  //     "A modern Flutter application for buying game top-ups, electricity tokens, and mobile credits. Integrated with Supabase, Midtrans, and Google AdMob for monetization.",
+  //   technologies: ["Flutter", "Supabase", "REST API", "AdMob", "Dart", "Firebase"],
+  //   completed: "May 2025",
+  //   image:
+  //     "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+  //   liveLink: "https://your-app-link.com",
+  //   githubLink: "https://github.com/yourusername/topup-app",
+  //   rating: 4.8,
+  //   downloads: "10K+",
+  //   isHidden: true
+  // },
+  // {
+  //   id: 2,
+  //   title: "Finance Tracker Pro",
+  //   description:
+  //     "Comprehensive personal finance tracking app with budget management, expense categorization, and financial insights.",
+  //   technologies: ["React Native", "Redux", "Node.js", "MongoDB", "Chart.js"],
+  //   completed: "March 2025",
+  //   image:
+  //     "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+  //   liveLink: "https://finance-app.com",
+  //   githubLink: "https://github.com/yourusername/finance-app",
+  //   rating: 4.6,
+  //   downloads: "5K+",
+  //   isHidden: true
+  // },
+  // {
+  //   id: 3,
+  //   title: "Health & Fitness Companion",
+  //   description:
+  //     "All-in-one health tracking app with workout plans, nutrition logging, and progress analytics.",
+  //   technologies: ["Flutter", "Firebase", "Google Fit API", "HealthKit", "BLoC"],
+  //   completed: "January 2025",
+  //   image:
+  //     "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+  //   liveLink: "https://health-app.com",
+  //   githubLink: "https://github.com/yourusername/health-app",
+  //   rating: 4.9,
+  //   downloads: "15K+",
+  //   isHidden: true
+  // },
 ];
 
 const dataContainer = document.getElementById("data-container");
