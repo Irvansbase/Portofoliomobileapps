@@ -1,17 +1,16 @@
 const projectData = [
   {
     id: 1,
-    title: "TopUp Game & Pulsa App",
+    title: "CekPaket - Cek Resi Pengiriman",
     description:
-      "A modern Flutter application for buying game top-ups, electricity tokens, and mobile credits. Integrated with Supabase, Midtrans, and Google AdMob for monetization.",
-    technologies: ["Flutter", "Supabase", "REST API", "AdMob", "Dart", "Firebase"],
-    completed: "May 2025",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    liveLink: "https://your-app-link.com",
-    githubLink: "https://github.com/yourusername/topup-app",
-    rating: 4.8,
-    downloads: "10K+",
+      "CekPaket - Cek Resi Pengiriman is a Flutter-based parcel tracking application that allows users to check their shipment status in real-time using tracking numbers from multiple Indonesian courier services. Powered by the Binderbyte API, this app provides an easy and clean interface for monitoring package delivery status across popular logistics providers..",
+    technologies: ["Flutter", "REST API", "AdMob", "Dart", ],
+    completed: "Juli 2025",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOQPFgkAfpcLVMOp3pJ3-iZ33-lWA1SZzelcsP_Ej_fRGCXK04RcRXQWkj453UtoXFRFjDlR6fDLvEANNZUDeCuULPSyZBAQGZ5t6Cg1PrTrFVr9QxlOYvAYQCZCiEWWjpXcGMLq5GLW-zrj7s5mBM5=w1024-h500-s-no-gm?authuser=0",
+    liveLink: "https://play.google.com/store/apps/details?id=com.andriirvansyah.cek_resi",
+    githubLink: "https://github.com/Irvansbase/cek-resiku-tracking-app?tab=readme-ov-file",
+    rating: "Internal Testing",
+    downloads: "Internal Testing",
     isHidden: false
   },
   {
