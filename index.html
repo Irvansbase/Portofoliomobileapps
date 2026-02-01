@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andri Irvansyah | Mobile App Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
     
     <!-- Flowbite CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -24,93 +26,143 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   integrity="sha512-sV9Xn9+8c+4S+WqvnqkLLJw94RRZbsceox4Tr3zB3qbSfoTkRrI9ozANuDEH4uMFd2xHTKBgPtgy0VucwNPL9g=="
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
 />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-poppins bg-gray-900">
     <!-- Header/Navbar -->
-    <header id="main-header" class="sticky top-2 z-50 bg-gray-200/80 dark:bg-gray-800/80 shadow-md mx-5 mt-2 rounded-xl transition-opacity duration-300 ease-in-out">
-
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white dark:text-white font-bold text-xl">AI</div>
-                        <span class="ml-3 text-xl font-bold text-gray-800 dark:text-white">Andri<span class="text-blue-400 dark:text-blue-400"> Irvansyah</span></span>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Dark mode toggle button -->
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
-                    <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
-                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
-                </button>
-                
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Beranda</a>
-                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Tentang</a>
-                    <a href="#services" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Layanan</a>
-                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Portofolio</a>
-                    <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Keahlian</a>
-                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Kontak</a>
-                </nav>
-                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
-                    <i id="menu-icon" class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+    <!-- Header/Navbar -->
+<header id="main-header" class="sticky top-2 z-50 bg-gray-200/80 dark:bg-gray-800/80 shadow-md mx-5 mt-2 rounded-xl transition-opacity duration-300 ease-in-out">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white dark:text-white font-bold text-xl">AI</div>
+            <span class="ml-3 text-xl font-bold text-gray-800 dark:text-white">Andri<span class="text-blue-400 dark:text-blue-400"> Irvansyah</span></span>
         </div>
         
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu-transition mobile-menu md:hidden">
+        <div class="flex items-center space-x-4">
+            <!-- Dark mode toggle button -->
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+                <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
+                <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+            </button>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Beranda</a>
+                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Tentang</a>
+                
+                <!-- Dropdown Layanan -->
+                <div class="relative group">
+                    <button class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium flex items-center gap-1">
+                        Layanan
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <a href="https://fastwork.id/user/andriirv" target="_blank" class="flex items-center gap-2 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-t-lg">
+                            <i class="fas fa-handshake"></i>
+                            <span>Fastwork</span>
+                        </a>
+                        <a href="https://lynk.id/andriirvansyah" target="_blank" class="flex items-center gap-2 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700">
+                            <i class="fas fa-store"></i>
+                            <span>Marketplace</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Portofolio</a>
+                <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Keahlian</a>
+                
+                <!-- Dropdown Kontak -->
+                <div class="relative group">
+                    <button class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium flex items-center gap-1">
+                        Kontak
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <a href="mailto:andriirvansyah.2731@gmail.com" class="flex items-center gap-2 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-t-lg">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://medium.com/@andriirvansyah.2731" target="_blank" class="flex items-center gap-2 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-b-lg">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Artikel</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
+                <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-transition mobile-menu md:hidden">
         <div class="px-4 py-6 space-y-3">
             <a href="#home" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
-            <i class="fas fa-home w-5"></i> Beranda
+                <i class="fas fa-home w-5"></i> Beranda
             </a>
             <a href="#about" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
-            <i class="fas fa-user w-5"></i> Tentang
+                <i class="fas fa-user w-5"></i> Tentang
             </a>
             <a href="#services" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
-            <i class="fas fa-cogs w-5"></i> Layanan
+                <i class="fas fa-cogs w-5"></i> Layanan
             </a>
             <a href="#projects" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
-            <i class="fas fa-briefcase w-5"></i> Portofolio
+                <i class="fas fa-briefcase w-5"></i> Portofolio
             </a>
             <a href="#skills" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
-            <i class="fas fa-code w-5"></i> Keahlian
+                <i class="fas fa-code w-5"></i> Keahlian
             </a>
             <a href="#contact" class="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold text-gray-800 dark:text-gray-100 hover:bg-amber-500 hover:text-white transition">
-            <i class="fas fa-envelope w-5"></i> Kontak
+                <i class="fas fa-envelope w-5"></i> Kontak
             </a>
         </div>
-        </div>
+    </div>
+</header>
 
-    </header>
 
+<!-- Tabbar di bawah (Glassmorphism iPhone style) -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 mx-2 mb-4 rounded-full border border-white/30 bg-white/30 backdrop-blur-md shadow-lg">
+  <div class="flex justify-around items-center h-16 px-4 py-1">
+    
+    <!-- Layanan -->
+    <a href="https://fastwork.id/user/andriirv" target="_blank" class="flex flex-col items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-2">
+      <i class="fas fa-handshake text-xl"></i>
+      <span class="text-xs mt-1">Layanan</span>
+    </a>
 
-    <!-- Tabbar di bawah -->
-    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-md">
-  <div class="flex justify-around items-center h-16">
-    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
-      <i class="fas fa-home text-xl"></i>
-      <span class="text-xs mt-1">Beranda</span>
-    </button>
-    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+    <!-- Project -->
+    <a href="#projects-container" class="flex flex-col items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-2">
       <i class="fas fa-briefcase text-xl"></i>
-      <span class="text-xs mt-1">Proyek</span>
-    </button>
-    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
-      <i class="fas fa-code text-xl"></i>
-      <span class="text-xs mt-1">Skill</span>
-    </button>
-    <button class="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+      <span class="text-xs mt-1">Project</span>
+    </a>
+
+    <!-- Artikel -->
+    <a href="https://medium.com/@andriirvansyah.2731" target="_blank" class="flex flex-col items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-2">
+      <i class="fas fa-newspaper text-xl"></i>
+      <span class="text-xs mt-1">Artikel</span>
+    </a>
+
+    <!-- Marketplace -->
+    <a href="https://lynk.id/andriirvansyah" class="flex flex-col items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-2">
+      <i class="fas fa-store text-xl"></i>
+      <span class="text-xs mt-1">Marketplace</span>
+    </a>
+
+    <!-- Mail -->
+    <a href="mailto:andriirvansyah.2731@gmail.com" class="flex flex-col items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-2">
       <i class="fas fa-envelope text-xl"></i>
-      <span class="text-xs mt-1">Kontak</span>
-    </button>
+      <span class="text-xs mt-1">Mail</span>
+    </a>
+
   </div>
 </div>
+
+
 
 
     <!-- Hero Section -->
@@ -157,15 +209,8 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">About <span class="text-amber-800 dark:text-blue-400">Me</span></h2>
             
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-2/5 mb-8 md:mb-0 md:pr-8 flex justify-center">
-                    <div class="w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczPgxQb_PtOyjUEJ6l0XDp3w0bg2z_r74kY6-T5Hqw3W1f_2yO-eJs1EoZGnQ7DvUfowJ7VpZKrXv_8eQ3J6k4Q9he2ELuy_x5bF1ET3OI0YCJdxfzowaujisEe4jJb55qn61p5sJvEob1nidYkVzX7K=w763-h919-s-no-gm?authuser=0" 
-                             alt="Andri Irvansyah" 
-                             class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="md:w-3/5">
+            <div class="flex justify-center">
+                <div class="max-w-2xl">
                     <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Mobile Apps Developer</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
                         I'm a passionate mobile developer with expertise in building beautiful and functional applications. 
@@ -374,17 +419,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-12">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center">
-                                    <i class="fas fa-star text-yellow-300"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <p class="font-bold">Rated Developer</p>
-                                    <p class="text-gray-800 dark:text-white">4/5 rating across platforms</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 
@@ -394,7 +429,7 @@
                         
                         <div class="space-y-6">
                             <!-- Upwork Button -->
-                            <a href="#" class="block group">
+                            <a href="https://fastwork.id/user/andriirv" target="_blank" class="block group">
                                 <div class="flex items-center justify-center bg-white dark:bg-gray-700 border border-green-500 rounded-lg p-4 transition-all duration-300 hover:bg-green-50 dark:hover:bg-green-900/20 hover:shadow-lg">
                                     <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
                                         <svg class="w-8 h-8 text-green-600 dark:text-green-400" viewBox="0 0 24 24" fill="currentColor">
@@ -402,8 +437,7 @@
                                         </svg>
                                     </div>
                                     <div class="ml-4 text-left">
-                                        <h4 class="font-bold text-gray-800 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">Hire on Upwork</h4>
-                                        <p class="text-gray-600 dark:text-gray-300 text-sm">Top Rated Plus Developer</p>
+                                        <h4 class="font-bold text-gray-800 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">Hire on Fastwork</h4>
                                     </div>
                                     <div class="ml-auto">
                                         <i class="fas fa-arrow-right text-gray-400 group-hover:text-green-600 dark:group-hover:text-green-400"></i>
@@ -411,26 +445,8 @@
                                 </div>
                             </a>
                             
-                            <!-- Fiverr Button -->
-                            <a href="#" class="block group">
-                                <div class="flex items-center justify-center bg-white dark:bg-gray-700 border border-green-400 rounded-lg p-4 transition-all duration-300 hover:bg-green-50 dark:hover:bg-green-900/20 hover:shadow-lg">
-                                    <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
-                                        <svg class="w-8 h-8 text-green-500 dark:text-green-400" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zM12 1.5C6.201 1.5 1.5 6.201 1.5 12S6.201 22.5 12 22.5 22.5 17.799 22.5 12 17.799 1.5 12 1.5zM9.75 8.25h.75a.75.75 0 01.75.75v6a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75V9a.75.75 0 01.75-.75zm4.5 0h.75a.75.75 0 01.75.75v6a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75V9a.75.75 0 01.75-.75z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="ml-4 text-left">
-                                        <h4 class="font-bold text-gray-800 dark:text-white group-hover:text-green-500 dark:group-hover:text-green-400">Hire on Fiverr</h4>
-                                        <p class="text-gray-600 dark:text-gray-300 text-sm">Level 2 Seller</p>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <i class="fas fa-arrow-right text-gray-400 group-hover:text-green-500 dark:group-hover:text-green-400"></i>
-                                    </div>
-                                </div>
-                            </a>
-                            
                             <!-- Direct Contract Button -->
-                            <a href="#" class="block group">
+                            <a href="mailto:andriirvansyah.2731@gmail.com" target="_blank" class="block group">
                                 <div class="flex items-center justify-center bg-white dark:bg-gray-700 border border-blue-500 rounded-lg p-4 transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:shadow-lg">
                                     <div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
                                         <i class="fas fa-file-contract text-blue-600 dark:text-blue-400 text-xl"></i>
@@ -449,7 +465,7 @@
                         <div class="mt-10 pt-6 border-t dark:border-gray-700">
                             <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">Prefer to start with a conversation?</h4>
                             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a href="mailto:hello@andriirvansyah.com" class="px-6 py-3 bg-white dark:bg-gray-700 border border-primary text-primary dark:text-blue-400 font-medium rounded-lg hover:bg-amber-500 hover:text-gray-900 hover:text-white dark:hover:bg-blue-900 transition flex items-center justify-center">
+                                <a href="mailto:andriirvansyah.2731@gmail.com" class="px-6 py-3 bg-white dark:bg-gray-700 border border-primary text-primary dark:text-blue-400 font-medium rounded-lg hover:bg-amber-500 hover:text-gray-900 hover:text-white dark:hover:bg-blue-900 transition flex items-center justify-center">
                                     <i class="fas fa-envelope mr-2"></i> Email Me
                                 </a>
                                 <a href="https://calendly.com/andriirvansyah" target="_blank" class="px-6 py-3 bg-primary text-white font-medium rounded-lg bg-secondary hover:bg-amber-500 hover:text-gray-900 transition flex items-center justify-center">
@@ -496,7 +512,7 @@
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
-                <p>&copy; 2023 Andri Irvansyah. All rights reserved.</p>
+                <p>&copy; 2023 Andri Irvansyah.</p>
             </div>
         </div>
     </footer>
